@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
+import Nav from "react-bootstrap/Nav";
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import axios from 'axios'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Homework from "./homework";
+import {Routes, Route, Link, Router} from "react-router-dom";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+
+      
+  <Routes>
+    <Route path="/homework" element={<Homework/>}/>
+  </Routes>
+  <Link to="/homework">홈페이지</Link>
     </div>
   );
-}
+
+  
+  }
 
 export default App;
