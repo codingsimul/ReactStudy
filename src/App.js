@@ -8,16 +8,15 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homework from "./homework";
 import {Routes, Route, Link, Router} from "react-router-dom";
+import Detail from './detail';
 
 function App() {
 
   return (
     <div className="App">
-      
-
-      
   <Routes>
     <Route path="/homework" element={<Homework/>}/>
+    <Route path="/image/:id" element={<Detail/>}/>
   </Routes>
   <Link to="/homework">홈페이지</Link>
     </div>
